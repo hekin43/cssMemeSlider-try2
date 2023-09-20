@@ -4,6 +4,7 @@ body {
   background-color: #1e1e23;
   text-align: center;
   font-family: "Inter", sans-serif;
+  overflow: hidden;
 }
 .background{
 	display: flex;
@@ -27,11 +28,8 @@ body {
 	display: flex;
 	width: 600%;
 	height: 90%;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
 	overflow: hidden;
-	object-fit: contain; 
+	object-fit: contain;
 }
 .image{
     display: flex;
@@ -40,6 +38,8 @@ body {
     max-width: 16.666%;
     justify-content: center;
     transition: all 1s ease;
+    overflow: hidden;
+	object-fit: contain;
 }
 .image img{
 	width: 100%;
@@ -48,18 +48,18 @@ body {
 }
 
 #pic1:checked~.slider-pictures #img1 {
-	margin-left: 0;
+	margin-left: 41.66%;
 }
 #pic2:checked~.slider-pictures #img1 {
-	margin-left: -16.666%;
+	margin-left: 25%;
 }
 #pic3:checked~.slider-pictures #img1 {
-	margin-left: -33.33%;
+	margin-left: 8.34%;
 }#pic4:checked~.slider-pictures #img1 {
-	margin-left: -49.99%;
+	margin-left: -8.34%;
 }
 #pic5:checked~.slider-pictures #img1 {
-	margin-left: -83.33%;
+	margin-left: -24.98%;
 }
 
 .slider-footer{
@@ -75,4 +75,36 @@ body {
 .slider-controls{
 	display: flex;
 	flex-direction: row;
+}
+.control {
+	width: 1.8em;
+	height: 1.8em;
+	opacity: 0.5;
+	border-radius: 50%;
+	transition: 0.4s;
+	box-sizing: border-box;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+}
+.visual-button{
+  border-radius: 50%;
+  width: 0.9em;
+  height: 0.9em;
+  cursor: pointer;
+  transition-duration: .2s;
+  background-color: skyblue;
+  box-sizing: border-box;
+}
+/*  наведение на кнопки*/
+.control:hover >.visual-button{
+  background-color: white;
+}
+input:checked + .control:hover >.visual-button{
+  border: solid 2px white;
+  background-color: #0C0C0E;
+}
+input:checked + .control >.visual-button{
+  border: solid 2px skyblue;
+  background-color: #0C0C0E;
 }
