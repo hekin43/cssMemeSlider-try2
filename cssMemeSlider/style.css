@@ -22,7 +22,7 @@ body {
 	overflow: hidden;
 	object-fit: contain;	
 }
-input{
+.input{
 	display: none;
 }
 .slider-pictures{
@@ -113,15 +113,47 @@ input{
 /*  наведение на кнопки*/
 .control:hover >.visual-button{			/*//при наведении на любую кнопку кроме активной*/
   background-color: white;
+  border: solid 2px white !important;
 }
-input:checked + .control:hover >.visual-button{
+/*.control:checked + .slider-footer .slider-controls .control:hover >.visual-button{		
+  border: solid .1em red;
+}*/
+/*.input:checked~.slider-footer .slider-controls .control:hover >.visual-button{
   border: solid 2px white;
   background-color: #1e1e23;
-}
-input:checked + .control >.visual-button{
+}*/
+
+
+
+
+#pic1:checked~.slider-footer .slider-controls #btn1 {
   border: solid 2px skyblue;
   background-color: #1e1e23;
 }
+#pic2:checked~.slider-footer .slider-controls #btn2 {
+  border: solid 2px skyblue;
+  background-color: #1e1e23;
+}
+#pic3:checked~.slider-footer .slider-controls #btn3 {
+  border: solid 2px skyblue;
+  background-color: #1e1e23;
+}
+#pic4:checked~.slider-footer .slider-controls #btn4 {
+  border: solid 2px skyblue;
+  background-color: #1e1e23;
+}
+#pic5:checked~.slider-footer .slider-controls #btn5 {
+  border: solid 2px skyblue;
+  background-color: #1e1e23;
+}
+
+
+/*#pic1:checked~.slider-footer .slider-controls #pic1:hover >#btn1 {
+  border: solid 2px white;
+  background-color: #1e1e23;
+}*/
+
+
 
 #pic1:checked~.slider-footer .signature #text1 {
 	margin-left: 0%;
