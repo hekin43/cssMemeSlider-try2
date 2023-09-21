@@ -75,7 +75,6 @@ body {
 	flex-direction: row;
 	overflow: hidden;
 	letter-spacing: .1em;
-/*	justify-content: flex-start;*/
 }
 .text{
 	min-width: 100%;
@@ -87,7 +86,6 @@ body {
 .slider-controls{
 	display: flex;
 	flex-direction: row;
-
 }
 .control {
 	display: flex;
@@ -113,45 +111,29 @@ body {
 /*  наведение на кнопки*/
 .control:hover >.visual-button{			/*//при наведении на любую кнопку кроме активной*/
   background-color: white;
-  border: solid 2px white !important;
+  border: solid 0.1em white !important;
 }
-/*.control:checked + .slider-footer .slider-controls .control:hover >.visual-button{		
-  border: solid .1em red;
-}*/
-/*.input:checked~.slider-footer .slider-controls .control:hover >.visual-button{
-  border: solid 2px white;
-  background-color: #1e1e23;
-}*/
-
-
-
 
 #pic1:checked~.slider-footer .slider-controls #btn1 {
-  border: solid 2px skyblue;
+  border: solid 0.1em skyblue;
   background-color: #1e1e23;
 }
 #pic2:checked~.slider-footer .slider-controls #btn2 {
-  border: solid 2px skyblue;
+  border: solid 0.1em skyblue;
   background-color: #1e1e23;
 }
 #pic3:checked~.slider-footer .slider-controls #btn3 {
-  border: solid 2px skyblue;
+  border: solid 0.1em skyblue;
   background-color: #1e1e23;
 }
 #pic4:checked~.slider-footer .slider-controls #btn4 {
-  border: solid 2px skyblue;
+  border: solid 0.1em skyblue;
   background-color: #1e1e23;
 }
 #pic5:checked~.slider-footer .slider-controls #btn5 {
-  border: solid 2px skyblue;
+  border: solid 0.1em skyblue;
   background-color: #1e1e23;
 }
-
-
-/*#pic1:checked~.slider-footer .slider-controls #pic1:hover >#btn1 {
-  border: solid 2px white;
-  background-color: #1e1e23;
-}*/
 
 
 
@@ -169,4 +151,16 @@ body {
 }
 #pic5:checked~.slider-footer .signature #text1 {
 	margin-left: -400%;
+}
+
+@media(max-width: 768px){
+	.slider-footer{
+		justify-content: center;
+		flex-direction: column-reverse;
+		gap: 1em;
+	}
+	.slider-controls{
+		justify-content: center;
+		align-items: center;
+	}
 }
